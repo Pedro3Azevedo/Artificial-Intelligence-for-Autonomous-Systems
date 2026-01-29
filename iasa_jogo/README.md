@@ -2,11 +2,9 @@
 
 A reactive agent simulation game where a character autonomously photographs animals in a dynamic environment using state machine-based artificial intelligence. Built as coursework for "Artificial Intelligence for Autonomous Systems" (Phases 1-2).
 
-**Part of**: [Artificial Intelligence for Autonomous Systems (IASA47094)](../README_IASA_Main.md)
-
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 This project demonstrates the practical implementation of a **reactive intelligent agent** with the following characteristics:
 
@@ -17,7 +15,7 @@ This project demonstrates the practical implementation of a **reactive intellige
 
 ---
 
-## 🤖 Intelligent Agent Architecture
+##  Intelligent Agent Architecture
 
 ### Agent Model
 
@@ -99,10 +97,6 @@ In State "Inspecao": RUIDO → Transition to "Inspecao" + PROCURAR
 In State "Observacao": RUIDO → No transition defined
 ```
 
-This stateful behavior is more intelligent than a simple reflex because:
-- **Context matters** - The agent remembers where it is
-- **Cumulative learning** - Actions depend on history of states
-- **Goal-oriented patterns** - State sequence drives toward photography goal
 
 ### Reactive Agent Characteristics
 
@@ -128,16 +122,6 @@ The agent exhibits **rational behavior** within its constraints:
 
 **Outcome**: Probabilistically increases chances of accomplishing goal
 
-### Reactive vs. Other Agent Types
-
-| Aspect | Reactive | Deliberative | Learning |
-|---|---|---|---|
-| **Decision Method** | State machine lookup | Planning algorithm | Trial & error |
-| **World Model** | None | Explicit model | Learned model |
-| **Adaptability** | Fixed | Replans on change | Improves over time |
-| **Speed** | ⚡ Very fast | ⏱ Slower | ⏱ Variable |
-| **Complexity** | ✓ Simple | ✗ Complex | ✗ Complex |
-| **Example** | This project | Chess AI (minimax) | Game AI (Q-learning) |
 
 ### State Diagram (Agent Behavior Flow)
 
@@ -220,21 +204,6 @@ The agent exhibits **rational behavior** within its constraints:
 
 ---
 
-## 🏗️ Architecture
-
-### Core Components
-
-The system follows the classic reactive agent pattern: **Perception → Control → Action**
-
-```
-Environment (Events)
-    ↓
-Character (Perception)
-    ↓
-Control (State Machine Processing)
-    ↓
-Action Execution
-```
 
 ### Class Structure
 
@@ -347,7 +316,7 @@ Action Execution
 - Accessed by state machine when event occurs
 - Retrieved from state's transition dictionary
 
-## 🎮 Game Flow
+##  Game Flow
 
 ### Initialization
 1. `Jogo.main()` creates new `Ambiente` and `Personagem`
@@ -372,7 +341,7 @@ executar() {
 }
 ```
 
-## 💻 Development Details
+##  Development Details
 
 **Language**: Java  
 **Design Pattern**: State Machine (Behavioral)  
@@ -380,7 +349,7 @@ executar() {
 **Generic Programming**: State machine parameterized for `<Evento, Accao>`  
 **Container**: HashMap for transition dictionary lookup  
 
-## ✨ Key Features
+## Key Features
 
 ✓ **Event-Driven Behavior** - Agent responds to environmental changes  
 ✓ **State Persistence** - Maintains internal state across iterations  
@@ -390,77 +359,10 @@ executar() {
 ✓ **Extensible Design** - Easy to add new states, events, or actions  
 ✓ **Autonomous Agent** - Self-directed behavior cycle with no external control
 
-## 🚀 How to Compile and Run
-
-```bash
-# Compile all Java sources
-javac -d bin src/**/*.java
-
-# Run the game
-java -cp bin src.Jogo
-
-# Follow prompts to input events:
-# s - Silence
-# r - Noise
-# a - Animal spotted
-# f - Animal flees
-# o - Take photo
-# t - Terminate
-```
-
-## 📝 Example Game Sequence
-
-```
-Event: SILENCIO
-State: Procura
-Action: PROCURAR
-
-Event: RUIDO
-State: Inspecao
-Action: APROXIMAR
-
-Event: ANIMAL
-State: Observacao
-Action: APROXIMAR
-
-Event: ANIMAL
-State: Registo
-Action: FOTOGRAFAR
-
-Event: FOTOGRAFIA
-State: Procura
-Action: PROCURAR
-```
-
-## 📐 Design Principles Applied
-
-- **Modularity** - Each class has single responsibility
-- **Encapsulation** - Internal state hidden; public interfaces only
-- **Abstraction** - Generic state machine abstraction
-- **DRY Principle** - Transition logic centralized in state machine
-- **Composition** - Personagem composes Controlo and references Ambiente
-- **Agent Paradigm** - Implements classic reactive agent model with sensors, decision logic, and actuators
-
-## 🎓 Connection to Course Content
-
-This project directly implements concepts from **Artificial Intelligence for Autonomous Systems**:
-
-- ✓ **Reactive Agent Architecture** (Chapter 2.6)
-- ✓ **State-Based Behavior Control**
-- ✓ **Perception-Action Cycle**
-- ✓ **State Machine Formalism** (Chapter 2.4 - Dinâmica)
-- ✓ **Goal-Directed Behavior** (implicit photography goal)
-- ✓ **Software Engineering** for intelligent systems (modularity, interfaces, abstraction)
-
-**Advanced Topics** for Future Expansion:
-- Deliberative agents with planning (A* search)
-- Markov Decision Processes (MDP)
-- Reinforcement learning (Q-learning)
-- Multi-agent coordination
 
 ## 📚 Educational Context
 
-This project is part of the IASA (Artificial Intelligence for Autonomous Systems) course at ISEC, demonstrating:
+This project is part of the IASA (Artificial Intelligence for Autonomous Systems) course at ISEL, demonstrating:
 
 1. Reactive agent architecture principles
 2. State machine design patterns
@@ -468,7 +370,7 @@ This project is part of the IASA (Artificial Intelligence for Autonomous Systems
 4. Generic programming techniques
 5. Clean code principles for maintainability
 
-## 📋 Files Summary
+##  Files Summary
 
 | File | Purpose | AI Component |
 |---|---|---|
@@ -483,41 +385,12 @@ This project is part of the IASA (Artificial Intelligence for Autonomous Systems
 | `Estado.java` | State representation with transitions | Agent memory |
 | `Transicao.java` | State transition (next state + action) | Decision mapping |
 
-## 🔮 Future Enhancements
+----
 
-- **Deliberative Agent** - Add planning/goal-based decision making (A*, BFS, DFS)
-- **Multiple Agent Types** - Hybrid reactive-deliberative agents
-- **Learning** - Implement Q-Learning (Reinforcement Learning) for behavior optimization
-- **Multi-Agent Systems** - Support concurrent characters with communication/coordination
-- **Richer Environments** - 2D grid world with spatial navigation and obstacles
-- **GUI** - Visual representation of states, transitions, and agent movement
-- **Logging & Analytics** - Detailed trace of decision-making process and state history
-- **Nondeterministic Transitions** - Probabilistic behavior for exploratory agents
-
----
-
-## 📄 License
-
-Educational use only. Project completed as coursework for IASA47094.
-
----
-
-## 👤 Author
+##  Author
 
 **Pedro Azevedo** (A47094)  
 Master's Degree in Informatics Engineering and Multimedia  
-ISEC - Instituto Superior de Engenharia de Lisboa
+ISEL - Instituto Superior de Engenharia de Lisboa
 
----
-
-## 🔗 Related Resources
-
-- **[Main IASA Project](../README_IASA_Main.md)** - Overview of all 13 phases
-- **[Python Agents Documentation](../iasa_agente/README.md)** - Phases 3-13
-- **[Final Report](../iasa47094relatorio.pdf)** - Detailed academic analysis
-
----
-
-**Last Updated**: January 29, 2026  
-**Course**: IASA47094 - Artificial Intelligence for Autonomous Systems  
-**Status**: Complete (Phases 1-2)
+lete (Phases 1-2)
