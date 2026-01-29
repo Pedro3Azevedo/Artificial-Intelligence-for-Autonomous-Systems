@@ -1,14 +1,11 @@
-# Autonomous Agents Framework (iasa_agente)
+# Autonomous Agents (iasa_agente)
 
 ## Phases 3-13: From Reactive Behaviors to Reinforcement Learning
 
 A comprehensive Python implementation of progressively sophisticated autonomous agent architectures, demonstrating the evolution from simple reactive behaviors to advanced learning systems.
-
-**Part of**: [Artificial Intelligence for Autonomous Systems (IASA47094)](../README_IASA_Main.md)
-
 ---
 
-## 📋 Overview
+## Overview
 
 This project implements **11 development phases** (3-13) covering the complete spectrum of agent design paradigms:
 
@@ -22,7 +19,7 @@ This project implements **11 development phases** (3-13) covering the complete s
 
 ---
 
-## 🗂️ Directory Structure
+## Directory Structure
 
 ```
 iasa_agente/
@@ -109,7 +106,7 @@ iasa_agente/
 
 ---
 
-## 🎯 Project Phases Detail
+## Project Phases Detail
 
 ### **Phase 3-5: Reactive Behavior Control**
 
@@ -410,7 +407,7 @@ Until convergence
 
 ---
 
-## 🔄 Environment Integration
+## Environment Integration
 
 ### SAE Framework
 
@@ -440,75 +437,11 @@ agent.executar(timesteps=1000)
 
 ---
 
-## 💻 Development Guide
 
-### Running Search Algorithms (Phases 6-8)
-
-```python
-from src.lib.pee import problema, busca_astar
-
-# Define problem
-state_initial = (0, 0)
-state_goal = (5, 5)
-problem = problema.Problema(state_initial, state_goal)
-
-# Solve with A*
-search = busca_astar.BuscaAStar(heuristica=manhattan_distance)
-solution = search.resolver(problem)
-
-print(f"Path found: {solution.caminho}")
-print(f"Cost: {solution.custo}")
-print(f"Nodes explored: {solution.nos_explorados}")
-```
-
-### Running Planning (Phases 9-10)
-
-```python
-from src.controlo_delib import controlodelib
-from src.lib.plan import planpee
-
-# Create deliberative controller
-planeador = planpee.PlanPEE()
-controlo = controlodelib.ControloDelib(planeador)
-
-# In agent loop
-for timestep in range(1000):
-    percepcao = ambiente.percepcao()
-    controlo.atualizar_mundo(percepcao)
-    accao = controlo.deliberar(objetivo)
-    ambiente.executar(accao)
-```
-
-### Running Q-Learning (Phase 13)
-
-```python
-from src.controlo_aprend import controloaprendref
-from src.lib.aprend_ref import aprendq, selaccaoegreedy
-
-# Create Q-Learning agent
-memoria = memoriaesparsa.MemoriaEsparsa()
-aprendizado = aprendq.AprendQ(memoria, alpha=0.1, gamma=0.99)
-seleccao = selaccaoegreedy.SelAccaoEGreedy(epsilon=0.1)
-controlo = controloaprendref.ControloAprendRef(aprendizado, seleccao)
-
-# Training loop
-for episode in range(1000):
-    state = ambiente.reset()
-    for step in range(max_steps):
-        action = controlo.seleccionar_accao(state)
-        state, reward = ambiente.step(action)
-        controlo.aprender(state, action, reward, state)
-
-# Use learned policy
-state = ambiente.reset()
-while not done:
-    action = controlo.melhor_accao(state)  # Exploit learned policy
-    state, reward = ambiente.step(action)
-```
 
 ---
 
-## 🧪 Testing & Validation
+## Testing & Validation
 
 Test files in `src/teste/`:
 - `teste_busca.py` - Validates search algorithms
@@ -523,7 +456,7 @@ python -m pytest src/teste/ -v
 
 ---
 
-## 📊 Performance Characteristics
+## Performance Characteristics
 
 ### Search Algorithms (Phases 6-8)
 
@@ -551,7 +484,7 @@ python -m pytest src/teste/ -v
 
 ---
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 After completing this project, you understand:
 
@@ -565,36 +498,8 @@ After completing this project, you understand:
 8. ✓ Exploration-exploitation trade-off
 9. ✓ Architecture progression from reactive to learning
 10. ✓ Software engineering for AI systems
-
----
-
-## 🔗 See Also
-
-- [Main IASA Repository README](../README_IASA_Main.md)
-- [Java Game Agent README](../iasa_jogo/README.md)
-- [SAE Framework Documentation](./src/lib/sae/sae-doc.pdf)
-- [Final Academic Report](../iasa47094relatorio.pdf)
-
----
-
-## 📝 Citation
-
-If using this project for academic work, cite as:
-
-```bibtex
-@thesis{azevedo2022iasa,
-  author = {Azevedo, Pedro},
-  title = {Artificial Intelligence for Autonomous Systems},
-  school = {Instituto Superior de Engenharia de Lisboa},
-  year = {2022},
-  course = {IASA47094}
-}
-```
-
 ---
 
 **Author**: Pedro Azevedo (A47094)  
-**Institution**: ISEC - Instituto Superior de Engenharia de Lisboa  
-**Course**: Artificial Intelligence for Autonomous Systems (IASA47094)  
-**Status**: Complete - All 13 phases implemented  
-**Last Updated**: January 29, 2026
+**Institution**: ISEL - Instituto Superior de Engenharia de Lisboa  
+**Course**: Artificial Intelligence for Autonomous Systems (IASA)  
