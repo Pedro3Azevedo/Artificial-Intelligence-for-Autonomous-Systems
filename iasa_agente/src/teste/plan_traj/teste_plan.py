@@ -1,0 +1,37 @@
+from teste.plan_traj.ligacao import Ligacao
+from teste.plan_traj.planeadortrajecto import PlaneadorTrajecto
+
+localidades=["Loc-0", "Loc-1", "Loc-2", "Loc-3", "Loc-4", "Loc-5", "Loc-6", "Loc-7", "Loc-8", "Loc-9", "Loc-10"]
+ligacoes = list()
+ligacoes.append(Ligacao("Loc-0", "Loc-1", 5))
+ligacoes.append(Ligacao("Loc-0", "Loc-2", 25))
+ligacoes.append(Ligacao("Loc-0", "Loc-7", 7))
+ligacoes.append(Ligacao("Loc-1", "Loc-3", 12))
+ligacoes.append(Ligacao("Loc-1", "Loc-6", 5))
+ligacoes.append(Ligacao("Loc-2", "Loc-4", 30))
+ligacoes.append(Ligacao("Loc-2", "Loc-7", 5))
+ligacoes.append(Ligacao("Loc-2", "Loc-8", 15))
+ligacoes.append(Ligacao("Loc-3", "Loc-2", 10))
+ligacoes.append(Ligacao("Loc-3", "Loc-5", 5))
+ligacoes.append(Ligacao("Loc-4", "Loc-3", 2))
+ligacoes.append(Ligacao("Loc-5", "Loc-6", 8))
+ligacoes.append(Ligacao("Loc-5", "Loc-4", 10))
+ligacoes.append(Ligacao("Loc-5", "Loc-9", 1))
+ligacoes.append(Ligacao("Loc-6", "Loc-3", 15))
+ligacoes.append(Ligacao("Loc-7", "Loc-8", 8))
+ligacoes.append(Ligacao("Loc-8", "Loc-4", 25))
+ligacoes.append(Ligacao("Loc-9", "Loc-6", 2))
+ligacoes.append(Ligacao("Loc-9", "Loc-10", 2))
+ligacoes.append(Ligacao("Loc-10", "Loc-4", 2))
+
+planeador = PlaneadorTrajecto()
+for loc in localidades:
+    print(loc)
+print("Escolher uma localidade de origem ->")
+origem = input()
+print("Escolher uma localidade de destino ->")
+destino = input()
+print("Calcular caminho de ", origem," a ", destino)
+print()
+solucao = planeador.planear(ligacoes, origem, destino)
+planeador.mostrar_trajecto(solucao)
