@@ -2,11 +2,10 @@
 
 A comprehensive academic project demonstrating the progression from reactive agents to sophisticated autonomous systems with planning and reinforcement learning. Built for the "Artificial Intelligence for Autonomous Systems" course (IASA47094) at ISEC - Instituto Superior de Engenharia de Lisboa.
 
-**Repository**: [Pedro3Azevedo/Artificial-Intelligence-for-Autonomous-Systems](https://github.com/Pedro3Azevedo/Artificial-Intelligence-for-Autonomous-Systems)
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 This repository contains **two integrated AI projects** totaling **13 development phases**:
 
@@ -23,7 +22,7 @@ Progressive implementation of increasingly sophisticated agent architectures:
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 ```
 Artificial-Intelligence-for-Autonomous-Systems/
@@ -85,7 +84,7 @@ Artificial-Intelligence-for-Autonomous-Systems/
 
 ---
 
-## 🎯 Project Phases
+##  Project Phases
 
 ### **Phase 1-2: Reactive Game Agent (Java)**
 **Location**: `iasa_jogo/src/`
@@ -236,33 +235,6 @@ Q(s,a) ← Q(s,a) + α × [r + γ × max_a' Q(s',a') - Q(s,a)]
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-- **Java** (for Phase 1-2): JDK 8+
-- **Python** (for Phase 3-13): Python 3.7+
-- **Git**: For cloning the repository
-
-### Installation
-
-```bash
-# Clone repository
-git clone https://github.com/Pedro3Azevedo/Artificial-Intelligence-for-Autonomous-Systems.git
-cd Artificial-Intelligence-for-Autonomous-Systems
-
-# Setup Python environment (for Phases 3-13)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt  # If available
-
-# Setup Java (for Phases 1-2)
-cd iasa_jogo
-javac -d bin src/**/*.java
-java -cp bin src.Jogo
-```
-
----
-
 ## 📖 Detailed Project Documentation
 
 ### Project 1: Java Game Agent
@@ -286,98 +258,14 @@ java -cp bin src.Jogo
 
 ---
 
-## 📚 Learning Path
-
-Follow this progression to understand the complete system:
-
-1. **Start with Foundations** (Reactive Game)
-   - Understand agent model: sensors → brain → actuators
-   - Learn state machines for decision-making
-   - See perception-action cycle in practice
-
-2. **Move to Behaviors** (Reactive Architectures)
-   - Composite behaviors and hierarchies
-   - Suppression and priority mechanisms
-   - Memory for stateful reactions
-
-3. **Learn Problem-Solving** (State Space Search)
-   - Graph traversal and tree search
-   - Heuristics for guided search
-   - Trade-offs: optimal vs. efficient
-
-4. **Understand Planning** (Deliberative Agents)
-   - World models and lookahead
-   - Multi-step problem decomposition
-   - Replanning under change
-
-5. **Model Uncertainty** (Markov Decision Processes)
-   - Probabilistic environments
-   - Reward structure and utility
-   - Iterative policy optimization
-
-6. **Enable Learning** (Reinforcement Learning)
-   - Trial-and-error adaptation
-   - Q-value temporal difference
-   - Exploration-exploitation balance
-
----
-
-## 📊 Architecture Progression
-
-```
-Phase 1-2: Reactive Agent
-├── State Machine
-└── Deterministic State Transitions
-
-      ↓
-
-Phase 3-5: Reactive Behaviors
-├── Hierarchical Behaviors
-├── Memory Integration
-└── Priority-Based Composition
-
-      ↓
-
-Phase 6-8: Search & Problem-Solving
-├── Graph/Tree Search
-├── Heuristic-Guided Search
-└── Optimal Path Finding
-
-      ↓
-
-Phase 9-10: Planning
-├── World Model
-├── Lookahead Reasoning
-└── Reconsideration Mechanism
-
-      ↓
-
-Phase 11-12: Stochastic Decision-Making
-├── Markov Decision Process
-├── Probability Model
-└── Utility-Based Choice
-
-      ↓
-
-Phase 13: Learning
-├── Q-Learning Algorithm
-├── Exploration-Exploitation
-└── Adaptive Behavior
-```
-
----
-
-## 🎓 Course Context
+##  Course Context
 
 **Course**: Artificial Intelligence for Autonomous Systems (IASA47094)  
-**Instructor**: Engenheiro Lus Morgado  
-**Institution**: ISEC - Instituto Superior de Engenharia de Lisboa  
-**Duration**: One academic year with iterative phases  
-**Assessment**: Final report + implementation + defense
+**Institution**: ISEL - Instituto Superior de Engenharia de Lisboa   
 
 ---
 
-## 📖 Academic Report
+## Academic Report
 
 A comprehensive final report document is included: **`iasa47094relatorio.pdf`**
 
@@ -392,7 +280,7 @@ A comprehensive final report document is included: **`iasa47094relatorio.pdf`**
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 ### Software Engineering
 ✓ Modular architecture with clear separation of concerns  
@@ -414,40 +302,8 @@ A comprehensive final report document is included: **`iasa47094relatorio.pdf`**
 ✓ Separation between models, control, and execution  
 ✓ Reusable libraries for algorithm implementation  
 
----
 
-## 🔮 Potential Extensions
-
-### Immediate Next Steps
-- [ ] Multi-agent coordination and communication
-- [ ] Continuous state/action spaces
-- [ ] Deep Q-Networks for complex problems
-- [ ] Transfer learning between tasks
-
-### Advanced Topics
-- [ ] Policy gradient methods (Actor-Critic)
-- [ ] Monte Carlo tree search (MCTS)
-- [ ] Inverse reinforcement learning
-- [ ] Hierarchical reinforcement learning
-
-### Application Domains
-- Autonomous robotics
-- Game AI agents
-- Resource management systems
-- Navigation and pathfinding
-
----
-
-## 📝 Files & Artifacts
-
-| File | Purpose |
-|---|---|
-| `iasa47094relatorio.pdf` | Complete academic final report |
-| `README.md` | This file - repository overview |
-| `iasa_jogo/README.md` | Java game agent documentation |
-| `iasa_agente/README.md` | Python agents documentation (TBD) |
-| `iasa_jogo/src/*.java` | 10 Java classes for game agent |
-| `iasa_agente/src/**/*.py` | 50+ Python modules for agents |
+py` | 50+ Python modules for agents |
 
 ---
 
@@ -461,37 +317,6 @@ A comprehensive final report document is included: **`iasa47094relatorio.pdf`**
 
 ---
 
-## 🤝 Contributing & Usage
-
-This is an **academic project** for educational purposes. Feel free to:
-- Study the code for learning
-- Adapt for your own projects
-- Reference in academic work
-- Extend with new algorithms
-
----
-
-## 📄 License
-
-Educational use only. Project completed as coursework for IASA47094.
-
----
-
-## 👤 Author
-
-**Pedro Azevedo** (A47094)  
-Master's Degree in Informatics Engineering and Multimedia  
-ISEC - Instituto Superior de Engenharia de Lisboa
-
----
-
-## 🔗 Related Resources
-
-- **[IASA Course Materials](https://moodle.isec.pt)** - Course documentation and theory
-- **[SAE Framework Documentation](./iasa_agente/src/lib/sae/sae-doc.pdf)** - Environment simulator docs
-- **[Final Report](./iasa47094relatorio.pdf)** - Detailed academic analysis
-
----
 
 **Last Updated**: January 29, 2026  
 **Repository Created**: 2022  
